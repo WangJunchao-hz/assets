@@ -599,9 +599,14 @@
 
 /*end*/
     
-
-    window.$api = u;
-
+    
+    if (typeof module !== 'undefined' && typeof exports === 'object') {
+        module.exports = u;
+    } else if (typeof define === 'function' && (define.amd || define.cmd)) {
+        define(u);
+    } else {
+        window.$api = u;
+    }
 })(window);
 
 
