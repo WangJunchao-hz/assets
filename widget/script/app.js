@@ -6,14 +6,16 @@
  * @description {}
  */
 require.config({
-    paths : {
-        "vue" : "lib/vue/2.2.0/vue.min",
-        "api" : "lib/apicloud/1.0.0/api",
-        "echarts" : "plugins/echarts/3.5.2/echarts.min"
+    paths: {
+        "vue": "lib/vue/2.2.0/vue.min",
+        "api": "lib/apicloud/1.0.0/api",
+        "echarts": "plugins/echarts/3.5.2/echarts.min",
+        "aui_tap": "lib/aui/2.1.0/aui-tab",
+        "art_template": "lib/art_template/4.9.1/template"
     },
     shim: {
-        "api" : {
-            exports : "$api"
+        "api": {
+            exports: "$api"
         }
     }
 });

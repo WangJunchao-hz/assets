@@ -3,48 +3,55 @@
  * @Date:   2017/5/4
  * @Last Modified by:   wangliang
  * @Last Modified time: 2017/5/4
- * @description {首页脚本}
+ * @file 首页脚本
  */
 define(function (require) {
+    //js模块加载
     var $api = require('api');
-        function Index() {
-            this.initUI();
-            this.initRoutes();
-            this.initEvents();
-        }
+    var vue = require('vue');
+    var tab = require('aui_tap');
 
-        Index.prototype.initUI = function () {
-            var self = this;
+    //定义一个类
+    function Index() {
+        this.init();
+        this.initUI();
+        this.initRoutes();
+        this.initEvents();
+    }
 
-            var header = $api.byId('header');
-            //适配iOS 7+，Android 4.4+状态栏
-            $api.fixStatusBar(header);
-            self.headerPos = $api.offset(header);
-            var main = $api.byId('main');
-            self.mainPos = $api.offset(main);
-            var year = $api.byId('year');
-            year.innerHTML = new Date().getFullYear();
-        };
+    /**
+     * @description 变量管理
+     */
+    Index.prototype.init = function () {
+        var self = this;
 
-        Index.prototype.initRoutes = function () {
-            var self = this;
-            api.openFrame({
-                name: 'main',
-                url: 'html/main.html',
-                bounces: true,
-                rect: {
-                    x: 0,
-                    y: self.headerPos.h,
-                    w: 'auto',
-                    h: 500
-                }
-            });
+    };
 
-        };
+    /**
+     * @description 页面首次加载
+     */
+    Index.prototype.initUI = function () {
+        var self = this;
 
-        Index.prototype.initEvents = function () {
+        $api.fixStatusBar(document.querySelector("#jHead"));
 
-        };
+    };
 
-        new Index();
+    /**
+     * @description 路由管理
+     */
+    Index.prototype.initRoutes = function () {
+        var self = this;
+
+    };
+
+    /**
+     * @description 事件管理
+     */
+    Index.prototype.initEvents = function () {
+        var self = this;
+
+    };
+
+    new Index();
 });
