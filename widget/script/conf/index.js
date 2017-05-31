@@ -7,8 +7,6 @@
  */
 define(function (require) {
     var $api = require('api');
-
-    apiready = function () {
         function Index() {
             this.initUI();
             this.initRoutes();
@@ -38,7 +36,7 @@ define(function (require) {
                     x: 0,
                     y: self.headerPos.h,
                     w: 'auto',
-                    h: self.mainPos.h
+                    h: 500
                 }
             });
 
@@ -49,5 +47,4 @@ define(function (require) {
         };
 
         new Index();
-    };
 });

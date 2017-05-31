@@ -6,7 +6,6 @@
  * @description {}
  */
 require.config({
-    baseUrl : "./script/",
     paths : {
         "vue" : "lib/vue/2.2.0/vue.min",
         "api" : "lib/apicloud/1.0.0/api",
