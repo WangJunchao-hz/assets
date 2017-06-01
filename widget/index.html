@@ -12,27 +12,29 @@
     <link rel="stylesheet" type="text/css" href="./css/conf/index.css"/>
 </head>
 <body>
-<header id="jHead" class="aui-bar aui-bar-nav">顶部导航栏</header>
-<footer class="aui-bar aui-bar-tab">
-    <div class="aui-bar-tab-item aui-active" tapmode>
-        <i class="aui-iconfont aui-icon-home"></i>
-        <div class="aui-bar-tab-label">首页</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="aui-iconfont aui-icon-star"></i>
-        <div class="aui-bar-tab-label">收藏</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <div class="aui-badge">99</div>
-        <i class="aui-iconfont aui-icon-cart"></i>
-        <div class="aui-bar-tab-label">购物车</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <div class="aui-dot"></div>
-        <i class="aui-iconfont aui-icon-my"></i>
-        <div class="aui-bar-tab-label">我的</div>
-    </div>
-</footer>
+<div id="app">
+    <header id="jHead" class="aui-bar aui-bar-nav">{{message}}</header>
+    <footer class="aui-bar aui-bar-tab">
+        <div class="aui-bar-tab-item aui-active" tapmode>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-star"></i>
+            <div class="aui-bar-tab-label">收藏</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-badge">99</div>
+            <i class="aui-iconfont aui-icon-cart"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-dot"></div>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+    </footer>
+</div>
 </body>
 <script type="text/javascript" data-main="./script/app" src="./script/lib/require/2.1.11/require.js"></script>
 <!-- apiready必须放在这里才能生效 -->
