@@ -1,5 +1,5 @@
 # assets
-## 技术结构：aui + requireJS + vue
+## 技术结构：aui + requireJS + vue + apiCloud
 ## 项目结构：
     widget(根目录)
         ||css
