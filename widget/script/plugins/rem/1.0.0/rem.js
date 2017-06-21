@@ -3,13 +3,13 @@
  * @Date:   2017/3/31
  * @Last Modified by:   wangliang
  * @Last Modified time: 2017/3/31
- * @description {根字体基数100px方便计算，以640px宽度的设计稿为基数等比缩放,devicePixelRatio兼容性有问题IE，Firefox不支持所以dpr=1}
+ * @description {根字体基数10px方便计算，以750px宽度的设计稿为基数等比缩放,devicePixelRatio兼容性有问题IE，Firefox不支持所以dpr=1}
  */
 ;(function (global) {
     function Rem() {
         this.options = {
-            baseFont: 100, //字体基数
-            design: 640, //设计稿宽度
+            baseFont: 20, //字体基数
+            design: 750/2, //设计稿宽度
             dpr:1,
             scale:1 //缩放比例为
         };
@@ -18,14 +18,14 @@
         this.refreshRem();
         this.initEvent();
     };
-    
+
     Rem.prototype.initParams = function () {
         var self = this;
         self.doc = document;
         self.docEl = self.doc.documentElement;
         self.meta = self.doc.querySelector('meta[name="viewport"]');
     };
-    
+
     Rem.prototype.initUI = function () {
         var self = this;
         if (self.meta) {
@@ -43,7 +43,7 @@
             }
         }
     };
-    
+
     Rem.prototype.refreshRem = function () {
         var self = this;
         self.width = self.docEl.getBoundingClientRect().width;
@@ -53,7 +53,7 @@
         self.docEl.style.fontSize = self.baseFont + 'px';
         self.docEl.setAttribute('data-dpr',self.options.dpr);
     };
-    
+
     Rem.prototype.initEvent = function () {
         var self = this;
         global.addEventListener('resize', function () {
@@ -62,7 +62,7 @@
             self.refreshRem();
         });
     };
-    
+
     if (typeof module !== 'undefined' && typeof exports === 'object') {
         module.exports = new Rem();
     } else if (typeof define === 'function' && (define.amd || define.cmd)) {

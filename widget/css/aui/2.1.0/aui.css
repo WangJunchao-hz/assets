@@ -37,21 +37,6 @@ html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,str
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
 }
-@media only screen and (min-width: 400px) {
-	html {
-		font-size: 21.33333333px !important;
-	}
-}
-@media only screen and (min-width: 414px) {
-	html {
-		font-size: 21px !important;
-	}
-}
-@media only screen and (min-width: 480px) {
-	html {
-		font-size: 25.6px !important;
-	}
-}
 ul, li {
 	list-style: none;
 }
@@ -134,6 +119,9 @@ button,input,select,textarea {
 .aui-padded-15 {
 	padding: 0.75rem !important;
 }
+.aui-padded-20 {
+	padding: 1rem !important;
+}
 .aui-padded-t-0 {
 	padding-top: 0 !important;
 }
@@ -145,6 +133,9 @@ button,input,select,textarea {
 }
 .aui-padded-t-15 {
 	padding-top: 0.75rem !important;
+}
+.aui-padded-t-20 {
+	padding-top: 1rem !important;
 }
 .aui-padded-b-0 {
 	padding-bottom: 0 !important;
@@ -158,6 +149,9 @@ button,input,select,textarea {
 .aui-padded-b-15 {
 	padding-bottom: 0.75rem !important;
 }
+.aui-padded-b-20 {
+	padding-bottom: 1rem !important;
+}
 .aui-padded-l-0 {
 	padding-left: 0 !important;
 }
@@ -169,6 +163,9 @@ button,input,select,textarea {
 }
 .aui-padded-l-15 {
 	padding-left: 0.75rem !important;
+}
+.aui-padded-l-20 {
+	padding-left: 1rem !important;
 }
 .aui-padded-r-0 {
 	padding-right: 0 !important;
@@ -182,6 +179,9 @@ button,input,select,textarea {
 .aui-padded-r-15 {
 	padding-right: 0.75rem !important;
 }
+.aui-padded-r-20 {
+	padding-right: 1rem !important;
+}
 .aui-margin-0 {
 	margin: 0 !important;
 }
@@ -193,6 +193,9 @@ button,input,select,textarea {
 }
 .aui-margin-15 {
 	margin: 0.75rem !important;
+}
+.aui-margin-20 {
+	margin: 1rem !important;
 }
 .aui-margin-t-0 {
 	margin-top: 0.25rem !important;
@@ -206,6 +209,9 @@ button,input,select,textarea {
 .aui-margin-t-15 {
 	margin-top: 0.75rem !important;
 }
+.aui-margin-t-20 {
+	margin-top: 1rem !important;
+}
 .aui-margin-b-0 {
 	margin-bottom: 0 !important;
 }
@@ -217,6 +223,9 @@ button,input,select,textarea {
 }
 .aui-margin-b-15 {
 	margin-bottom: 0.75rem !important;
+}
+.aui-margin-b-20 {
+	margin-bottom: 1rem !important;
 }
 .aui-margin-l-0 {
 	margin-left: 0 !important;
@@ -230,6 +239,9 @@ button,input,select,textarea {
 .aui-margin-l-15 {
 	margin-left: 0.75rem !important;
 }
+.aui-margin-l-20 {
+	margin-left: 1rem !important;
+}
 .aui-margin-r-0 {
 	margin-right: 0 !important;
 }
@@ -241,6 +253,9 @@ button,input,select,textarea {
 }
 .aui-margin-r-15 {
 	margin-right: 0.75rem !important;
+}
+.aui-margin-r-20 {
+	margin-right: 1rem !important;
 }
 .aui-clearfix {
 	clear: both;

@@ -1,0 +1,31 @@
+/*头部start*/
+.aui-bar-nav{
+    background-color: #f36161;
+}
+/*头部end*/
+/*底部start*/
+.aui-bar-tab{
+    height: 3rem;
+    background-color: #f36161;
+}
+.add{
+    display: inline-block;
+    position: absolute;
+    top:-1rem;
+    left: 50%;
+    margin-left: -2rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #f36161;
+    border-radius: 100%;
+}
+.icon-jia{
+    font-size: 3.2rem;
+    color: #ffffff;
+}
+.icon-plus{
+    font-size: 3.2rem;
+    color: #ffffff;
+}
+/*底部end*/
