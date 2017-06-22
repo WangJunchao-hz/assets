@@ -1,12 +1,12 @@
 /*头部start*/
 .aui-bar-nav{
-    background-color: #f36161;
+    background-color: #cd3c3c;
 }
 /*头部end*/
 /*底部start*/
 .aui-bar-tab{
     height: 3rem;
-    background-color: #f36161;
+    background-color: #cd3c3c;
 }
 .add{
     display: inline-block;
@@ -17,12 +17,18 @@
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
-    background-color: #f36161;
+    background-color: #cd3c3c;
     border-radius: 100%;
+}
+.add:active{
+    box-shadow: 0 0 1rem #cd3c3c;
 }
 .icon-jia{
     font-size: 3.2rem;
     color: #ffffff;
+}
+.icon-jia:active{
+    color: #eeeeee;
 }
 .icon-plus{
     font-size: 3.2rem;

@@ -36,6 +36,7 @@ define(function (require) {
     Index.prototype.initUI = function () {
         var self = this;
 
+        api.parseTapmode(); //优化点击
         $api.fixStatusBar($api.byId("jHeader"));
 
         self.app = new Vue({
@@ -61,6 +62,9 @@ define(function (require) {
     Index.prototype.events = function () {
         var self = this;
 
+        $('#jAdd').click(function(){
+            self.app.message = '不要点我';
+        });
     };
 
     /**
