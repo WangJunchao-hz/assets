@@ -3,15 +3,15 @@
  * @Date:   2017/3/31
  * @Last Modified by:   wangliang
  * @Last Modified time: 2017/3/31
- * @description {根字体基数10px方便计算，以750px宽度的设计稿为基数等比缩放,devicePixelRatio兼容性有问题IE，Firefox不支持所以dpr=1}
+ * @description {根字体基数可跟实际项目需求更改建议10px，以750px宽度的设计稿为基数等比缩放,devicePixelRatio兼容性有问题IE，Firefox不支持所以dpr=1}
  */
 ;(function (global) {
     function Rem() {
         this.options = {
             baseFont: 20, //字体基数
-            design: 750/2, //设计稿宽度
-            dpr:1,
-            scale:1 //缩放比例为
+            design: 750 / 2, //设计稿宽度
+            dpr: 1,
+            scale: 1 //缩放比例为
         };
         this.initParams();
         this.initUI();
@@ -29,11 +29,11 @@
     Rem.prototype.initUI = function () {
         var self = this;
         if (self.meta) {
-            self.meta.setAttribute('content', 'initial-scale=' + self.options.scale + ', maximum-scale=' + self.options.scale + ', minimum-scale=' + self.options.scale + ', user-scalable=no');
+            self.meta.setAttribute('content', 'initial-scale=' + self.options.scale + ',maximum-scale=' + self.options.scale + ',minimum-scale=' + self.options.scale + ',user-scalable=no,width=device-width');
         } else {
             self.meta = self.doc.createElement('meta');
             self.meta.setAttribute('name', 'viewport');
-            self.meta.setAttribute('content', 'initial-scale=' + self.options.scale + ', maximum-scale=' + self.options.scale + ', minimum-scale=' + self.options.scale + ', user-scalable=no');
+            self.meta.setAttribute('content', 'initial-scale=' + self.options.scale + ',maximum-scale=' + self.options.scale + ',minimum-scale=' + self.options.scale + ',user-scalable=no,width=device-width');
             if (self.docEl.firstElementChild) {
                 self.docEl.firstElementChild.appendChild(self.meta);
             } else {
@@ -46,12 +46,12 @@
 
     Rem.prototype.refreshRem = function () {
         var self = this;
-        self.width = self.docEl.getBoundingClientRect().width;
-        // self.width = window.screen.width/self.options.scale;
+        // self.width = self.docEl.getBoundingClientRect().width;
+        self.width = window.screen.width/self.options.scale;
         self.scale = self.width / self.options.design;
         self.baseFont = self.scale * self.options.baseFont;
         self.docEl.style.fontSize = self.baseFont + 'px';
-        self.docEl.setAttribute('data-dpr',self.options.dpr);
+        self.docEl.setAttribute('data-dpr', self.options.dpr);
     };
 
     Rem.prototype.initEvent = function () {
