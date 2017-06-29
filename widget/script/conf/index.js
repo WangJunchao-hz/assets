@@ -5,13 +5,14 @@
  * @Last Modified time: 2017/5/4
  * @file 首页脚本
  */
-define(function (require) {
+define(function(require) {
     /**
      * @description: 加载js模块
      */
     var $api = require('api');
     var Vue = require('vue');
     var $ = require('zepto');
+    var date = require('date');
 
     /**
      * @description: 新建一个类
@@ -25,15 +26,20 @@ define(function (require) {
     /**
      * @description: 初始化参数(全局变量+常量)
      */
-    Index.prototype.init = function () {
+    Index.prototype.init = function() {
         var self = this;
 
+        //缓存全局变量
+        self.title = date.periods() + '好';
+
+        //缓存全局dom对象
+        self.footerDom = $('#jFooter');
     };
 
     /**
      * @description: 初始化页面(首屏)
      */
-    Index.prototype.initUI = function () {
+    Index.prototype.initUI = function() {
         var self = this;
 
         api.parseTapmode(); //优化点击
@@ -42,15 +48,15 @@ define(function (require) {
         self.app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                message: self.title
             },
-            beforeCreate: function () {
+            beforeCreate: function() {
 
             },
-            computed: function () {
+            computed: function() {
 
             },
-            methods: function () {
+            methods: function() {
 
             }
         });
@@ -59,18 +65,26 @@ define(function (require) {
     /**
      * @description: 事件管理
      */
-    Index.prototype.events = function () {
+    Index.prototype.events = function() {
         var self = this;
 
-        $('#jAdd').click(function(){
+        //添加数据
+        $('#jAdd').click(function() {
             self.app.message = '不要点我';
         });
+
+        //底部菜单栏导航
+        $('#jFooter').on('click', '.aui-bar-tab-item', function() {
+            if (!$(this).hasClass('aui-active')) {
+                $(this).addClass('aui-active').siblings().removeClass('aui-active');
+            }
+        })
     };
 
     /**
      * @description: ajax管理
      */
-    Index.prototype.https = function () {
+    Index.prototype.https = function() {
         var self = this;
         return {
 
@@ -80,7 +94,7 @@ define(function (require) {
     /**
      * @description: 方法管理
      */
-    Index.prototype.methods = function () {
+    Index.prototype.methods = function() {
         var self = this;
         return {
 
