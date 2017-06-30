@@ -17,29 +17,49 @@
         <header id="jHeader" class="aui-bar aui-bar-nav">{{message}}</header>
         <section>
             <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
+                <div class="aui-card-list-header aui-card-list-user aui-border-b">
+                    <div class="aui-card-list-user-avatar">
+                        <img src="../image/demo4.png" class="aui-img-round" />
+                    </div>
+                    <div class="aui-card-list-user-name">
+                        <div>AUI</div>
+                        <small>1天前</small>
+                    </div>
+                    <div class="aui-card-list-user-info">北京朝阳</div>
                 </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
+                <div class="aui-card-list-content-padded">
+                    <img src="../image/l2.png" />
                 </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
+                <div class="aui-card-list-footer aui-border-t">
+                    <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
+                    <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
+                    <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
+                </div>
             </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
-        </div>
         </section>
         <footer id="jFooter" class="aui-bar aui-bar-tab">
-            <div id="jAdd" class="add" tapmode>
-                <span class="iconfont icon-jia"></span>
+            <div class="aui-bar-tab-item aui-active" tapmode>
+                <i class="aui-iconfont aui-icon-home"></i>
+                <div class="aui-bar-tab-label">首页</div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <i class="aui-iconfont aui-icon-star"></i>
+                <div class="aui-bar-tab-label">收藏</div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <div id="jAdd" class="add" tapmode>
+                    <span class="iconfont icon-jia"></span>
+                </div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <div class="aui-badge">99</div>
+                <i class="aui-iconfont aui-icon-cart"></i>
+                <div class="aui-bar-tab-label">购物车</div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <div class="aui-dot"></div>
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">我的</div>
             </div>
         </footer>
     </div>

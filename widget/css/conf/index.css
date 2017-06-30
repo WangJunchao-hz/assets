@@ -1,37 +1,32 @@
 /*头部start*/
-.aui-bar-nav{
-    background-color: #cd3c3c;
+.aui-bar-nav {
+    background-color: #f20c00;
 }
 /*头部end*/
+
+
 /*底部start*/
-.aui-bar-tab{
-    height: 3rem;
-    background-color: #cd3c3c;
+.aui-bar-tab {
+    background-color: #fff;
+}
+.aui-bar-tab .aui-active{
+  color: #f35336;
 }
 .add{
-    display: inline-block;
-    position: absolute;
-    top:-1rem;
-    left: 50%;
-    margin-left: -2rem;
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
-    background-color: #cd3c3c;
-    border-radius: 100%;
+  display: inline-block;
+  margin-top: -.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,.5);
 }
-.add:active{
-    box-shadow: 0 0 1rem #cd3c3c;
+.icon-jia {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #f20c00;
 }
-.icon-jia{
-    font-size: 3.2rem;
-    color: #ffffff;
-}
-.icon-jia:active{
-    color: #eeeeee;
-}
-.icon-plus{
-    font-size: 3.2rem;
-    color: #ffffff;
+
+.icon-jia:active {
+    color: #ff461f;
 }
 /*底部end*/
