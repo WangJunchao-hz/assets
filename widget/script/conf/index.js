@@ -9,9 +9,8 @@ define(function(require) {
     /**
      * @description: 加载js模块
      */
-    var $api = require('api');
-    var Vue = require('vue');
-    var $ = require('zepto');
+    var common = require('common');
+    common.init();
     var date = require('date');
 
     /**

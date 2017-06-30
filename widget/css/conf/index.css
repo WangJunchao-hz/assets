@@ -1,4 +1,7 @@
 /*头部start*/
+header.aui-bar{
+    position: fixed;
+}
 .aui-bar-nav {
     background-color: #f20c00;
 }

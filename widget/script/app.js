@@ -11,7 +11,11 @@ require.config({
         "vue": "lib/vue/2.2.0/vue.min",
         "api": "plugins/apicloud/1.0.0/api",
         "echarts": "plugins/echarts/3.5.2/echarts.min",
-        "date": "lib/utils/date/1.0.0/date"
+        "date": "lib/utils/date/1.0.0/date",
+        "common":"conf/common",
+        "transform":"lib/alloy_touch/0.2.5/transform",
+        "alloy_touch":"lib/alloy_touch/0.2.5/alloy_touch",
+        "alloy_touch_css":"lib/alloy_touch/0.2.5/alloy_touch.css"
     },
     shim: {
         "api": {
