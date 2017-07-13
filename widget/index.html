@@ -4,231 +4,48 @@
 <head>
     <meta charset="utf-8">
     <script src="./script/lib/utils/rem/1.0.0/rem.js"></script>
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <title>首页</title>
-    <link rel="stylesheet" type="text/css" href="./css/aui/2.1.0/aui.css" />
-    <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css" />
-    <link rel="stylesheet" type="text/css" href="./css/conf/index.css" />
+    <title>入口页</title>
+    <link rel="stylesheet" type="text/css" href="./css/aui/2.1.0/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/conf/index.css"/>
 </head>
 
 <body>
-    <div id="app">
-        <header id="jHeader" class="aui-bar aui-bar-nav">{{message}}</header>
-        <section>
-            <div class="aui-card-list">
-                <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                    <div class="aui-card-list-user-avatar">
-                        <img src="../image/demo4.png" class="aui-img-round" />
-                    </div>
-                    <div class="aui-card-list-user-name">
-                        <div>AUI</div>
-                        <small>1天前</small>
-                    </div>
-                    <div class="aui-card-list-user-info">北京朝阳</div>
-                </div>
-                <div class="aui-card-list-content-padded">
-                    <img src="../image/l2.png" />
-                </div>
-                <div class="aui-card-list-footer aui-border-t">
-                    <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                    <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                    <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-                </div>
-            </div>
-            <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
+<div id="app">
+    <header id="jHeader" class="aui-bar aui-bar-nav">{{message}}</header>
+    <footer id="jFooter" class="aui-bar aui-bar-tab">
+        <div class="aui-bar-tab-item item aui-active" tapmode>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item item" tapmode>
+            <i class="aui-iconfont aui-icon-star"></i>
+            <div class="aui-bar-tab-label">待开发</div>
+        </div>
+        <div id="jAdd" class="aui-bar-tab-item" tapmode>
+            <div class="add">
+                <span class="iconfont icon-jia"></span>
             </div>
         </div>
-        <ul class="aui-list aui-select-list">
-            <li class="aui-list-header">带有单选或多选框的列表</li>
-            <label class="aui-list-item">
-                <div class="aui-list-item-label">
-                    <input class="aui-radio" type="radio" name="radio" checked>
-                </div>
-                <div class="aui-list-item-inner">
-                    这是一个列表项
-                    <div class="aui-list-item-text">
-                        这里是内容区域，新版中的列表布局可以很轻松的帮助开发者完成常见列表样式。
-                    </div>
-                </div>
-            </label>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <label><input class="aui-radio" type="radio" name="radio" checked> 这是一个列表项</label>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <label><input class="aui-radio" disabled type="radio" name="radio"> 这是一个列表项</label>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <label><input class="aui-radio" type="radio" name="radio2" checked> 选项一</label>
-                    <label><input class="aui-radio" type="radio" name="radio2"> 选项二</label>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <label><input class="aui-checkbox" type="radio" name="checkbox" checked> 这是一个列表项</label>
-                </div>
-            </li>
-            <li class="aui-list-item">
-                <div class="aui-list-item-inner">
-                    <label><input class="aui-checkbox" disabled checked="" type="radio" name="checkbox"> 禁止选择</label>
-                </div>
-            </li>
-        </ul>
-        <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
+        <div class="aui-bar-tab-item item" tapmode>
+            <i class="aui-iconfont aui-icon-cart"></i>
+            <div class="aui-bar-tab-label">待开发</div>
         </div>
-        <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
+        <div class="aui-bar-tab-item item" tapmode>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">待开发</div>
         </div>
-        <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
-        </div>
-        <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
-        </div>
-        <div class="aui-card-list">
-            <div class="aui-card-list-header aui-card-list-user aui-border-b">
-                <div class="aui-card-list-user-avatar">
-                    <img src="../image/demo4.png" class="aui-img-round" />
-                </div>
-                <div class="aui-card-list-user-name">
-                    <div>AUI</div>
-                    <small>1天前</small>
-                </div>
-                <div class="aui-card-list-user-info">北京朝阳</div>
-            </div>
-            <div class="aui-card-list-content-padded">
-                <img src="../image/l2.png" />
-            </div>
-            <div class="aui-card-list-footer aui-border-t">
-                <div><i class="aui-iconfont aui-icon-note"></i> 666</div>
-                <div><i class="aui-iconfont aui-icon-laud"></i> 888</div>
-                <div><i class="aui-iconfont aui-icon-star"></i> 888</div>
-            </div>
-        </div>
-        </section>
-        <footer id="jFooter" class="aui-bar aui-bar-tab">
-            <div class="aui-bar-tab-item aui-active" tapmode>
-                <i class="aui-iconfont aui-icon-home"></i>
-                <div class="aui-bar-tab-label">首页</div>
-            </div>
-            <div class="aui-bar-tab-item" tapmode>
-                <i class="aui-iconfont aui-icon-star"></i>
-                <div class="aui-bar-tab-label">收藏</div>
-            </div>
-            <div class="aui-bar-tab-item" tapmode>
-                <div id="jAdd" class="add" tapmode>
-                    <span class="iconfont icon-jia"></span>
-                </div>
-            </div>
-            <div class="aui-bar-tab-item" tapmode>
-                <div class="aui-badge">99</div>
-                <i class="aui-iconfont aui-icon-cart"></i>
-                <div class="aui-bar-tab-label">购物车</div>
-            </div>
-            <div class="aui-bar-tab-item" tapmode>
-                <div class="aui-dot"></div>
-                <i class="aui-iconfont aui-icon-my"></i>
-                <div class="aui-bar-tab-label">我的</div>
-            </div>
-        </footer>
-    </div>
+    </footer>
+</div>
 </body>
 <script type="text/javascript" data-main="./script/app" src="./script/lib/require/2.1.11/require.js"></script>
 <!-- apiready必须放在这里才能生效 -->
 <script type="text/javascript">
-    apiready = function() {
-        require(['conf/index'])
+    apiready = function () {
+        require(['conf/index']);
     };
 </script>
 

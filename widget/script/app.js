@@ -15,7 +15,8 @@ require.config({
         "common":"conf/common",
         "transform":"lib/alloy_touch/0.2.5/transform",
         "alloy_touch":"lib/alloy_touch/0.2.5/alloy_touch",
-        "alloy_touch_css":"lib/alloy_touch/0.2.5/alloy_touch.css"
+        "alloy_touch_css":"lib/alloy_touch/0.2.5/alloy_touch.css",
+        "alloy_touch_vue":"lib/alloy_touch/0.2.5/alloy_touch.vue"
     },
     shim: {
         "api": {

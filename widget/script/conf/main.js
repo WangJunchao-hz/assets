@@ -15,7 +15,7 @@ define(function(require) {
     /**
      * @description: 新建一个类
      */
-    function Index() {
+    function Main() {
         this.init();
         this.initUI();
         this.events();
@@ -24,22 +24,21 @@ define(function(require) {
     /**
      * @description: 初始化参数(全局变量+常量)
      */
-    Index.prototype.init = function() {
+    Main.prototype.init = function() {
         var self = this;
 
         //缓存全局变量
         self.title = date.periods() + '好';
 
         //缓存全局dom对象
+        self.footerDom = $('#jFooter');
     };
 
     /**
      * @description: 初始化页面(首屏)
      */
-    Index.prototype.initUI = function() {
+    Main.prototype.initUI = function() {
         var self = this;
-
-        common.methods().openFrame('main_frm','./html/main_frm.html','',true);
 
         self.app = new Vue({
             el: '#app',
@@ -61,26 +60,15 @@ define(function(require) {
     /**
      * @description: 事件管理
      */
-    Index.prototype.events = function() {
+    Main.prototype.events = function() {
         var self = this;
 
-        //添加数据
-        $('#jAdd').click(function() {
-            self.app.message = '不要点我';
-        });
-
-        //底部菜单栏导航
-        $('#jFooter').on('click', '.item', function() {
-            if (!$(this).hasClass('aui-active')) {
-                $(this).addClass('aui-active').siblings().removeClass('aui-active');
-            }
-        })
     };
 
     /**
      * @description: ajax管理
      */
-    Index.prototype.https = function() {
+    Main.prototype.https = function() {
         var self = this;
         return {
 
@@ -90,12 +78,12 @@ define(function(require) {
     /**
      * @description: 方法管理
      */
-    Index.prototype.methods = function() {
+    Main.prototype.methods = function() {
         var self = this;
         return {
 
         };
     };
 
-    new Index();
+    new Main();
 });

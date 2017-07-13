@@ -5,14 +5,11 @@
  * @Last Modified time: 2017/5/4
  * @file 常用的方法
  */
-define(function (require) {
+define(function(require) {
     /**
      * @description: 加载js模块
      */
     require('zepto');
-    require('transform');
-    // require('alloy_touch');
-    require('alloy_touch_css');
     var $api = require('api');
     var Vue = require('vue');
 
@@ -20,67 +17,42 @@ define(function (require) {
      * @description: 新建一个类
      */
     function Common() {
-
+        this.init();
+        this.initUI();
     }
 
     /**
      * @description: 初始化参数(全局变量+常量)
      */
-    Common.prototype.init = function () {
+    Common.prototype.init = function() {
         var self = this;
         window.$api = $api;
         window.Vue = Vue;
-        self.initUI();
+
+        api.parseTapmode(); //优化点击
+
+        var delay = 0;
+        if (api.systemType != 'ios') {
+            delay = 300;
+        }
+        self.delay = delay; //页面打开延时
     };
 
     /**
      * @description: 初始化页面(首屏)
      */
-    Common.prototype.initUI = function () {
+    Common.prototype.initUI = function() {
         var self = this;
-
-        var target = document.querySelector("#app");
-        Transform(target,true);
-        var alloyTouch = new AlloyTouch({
-            touch: "#app",//反馈触摸的dom
-            vertical: true,//不必需，默认是true代表监听竖直方向touch
-            target: target, //运动的对象
-            property: "translateY",  //被运动的属性
-            min: 100, //不必需,运动属性的最小值
-            max: 2000, //不必需,滚动属性的最大值
-            sensitivity: 1,//不必需,触摸区域的灵敏度，默认值为1，可以为负数
-            factor: 1,//不必需,表示触摸位移与被运动属性映射关系，默认值是1
-            step: 45,//用于校正到step的整数倍
-            bindSelf: false,
-            initialValue: 0,
-            change: function (value) {
-                alert(value);
-            },
-            touchStart: function (evt, value) {
-                alert(value);
-            },
-            touchMove: function (evt, value) {
-                alert(value);
-            },
-            touchEnd: function (evt, value) {
-                alert(value);
-            },
-            tap: function (evt, value) {
-                alert(value);
-            },
-            pressMove: function (evt, value) {
-                alert(value);
-            },
-            animationEnd: function (value) {
-                alert(value);
-            } //运动结束
-        });
+        var headerDom = $api.byId("jHeader");
+        if(headerDom){
+            $api.fixStatusBar($api.byId("jHeader"));
+        }
     };
 
     /**
      * @description: 事件管理
      */
-    Common.prototype.events = function () {
+    Common.prototype.events = function() {
         var self = this;
 
     };
@@ -88,7 +60,7 @@ define(function (require) {
     /**
      * @description: ajax管理
      */
-    Common.prototype.https = function () {
+    Common.prototype.https = function() {
         var self = this;
         return {};
     };
@@ -96,10 +68,52 @@ define(function (require) {
     /**
      * @description: 方法管理
      */
-    Common.prototype.methods = function () {
+    Common.prototype.methods = function() {
         var self = this;
-        return {};
-    };
+        return {
+            /**
+             * @param name[String] 窗口名称
+             * @param url[String] 窗口地址
+             * @param param[String] 传入参数
+             */
+            openWin: function(name, url, param, isBounces) {
+                api.openWin({
+                    name: name,
+                    url: url, //以当前窗口为相对路径而不是js
+                    delay: self.delay,
+                    bounces: isBounces || false,
+                    pageParam: param || ''
+                });
+            },
+            /**
+             * @param name[String] 窗口名称
+             * @param url[String] 窗口地址
+             * @param param[String] 传入参数
+             */
+            openFrame: function(name, url, param, isBounces) {
+                var headerH = 0,
+                    footerH = 0;
+                try {
+                    headerH = $api.offset($api.byId("jHeader")).h;
+                    footerH = $api.offset($api.byId("jFooter")).h;
+                } catch (e) {
 
+                }
+                api.openFrame({
+                    name: name,
+                    url: url, //以当前窗口为相对路径而不是js
+                    rect: {
+                        x: 0, //左上角x坐标
+                        y: headerH, //左上角y坐标
+                        w: 'auto', //宽度，若传'auto'，页面从x位置开始自动充满父页面宽度
+                        h: api.winHeight - headerH - footerH // 打开窗口高度
+                    },
+                    bounces: isBounces || false,
+                    pageParam: param || '',
+                    delay: self.delay
+                });
+            }
+        };
+    };
     return new Common();
 });

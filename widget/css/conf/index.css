@@ -1,35 +1,49 @@
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 /*头部start*/
-header.aui-bar{
+
+header.aui-bar {
     position: fixed;
 }
+
 .aui-bar-nav {
     background-color: #f20c00;
 }
+
+
 /*头部end*/
 
 
 /*底部start*/
+
 .aui-bar-tab {
     background-color: #fff;
 }
-.aui-bar-tab .aui-active{
-  color: #f35336;
+
+.aui-bar-tab .aui-active {
+    color: #f35336;
 }
-.add{
-  display: inline-block;
-  margin-top: -.5rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 100%;
-  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,.5);
+
+.add {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, .5);
 }
+
 .icon-jia {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
+    font-size: 2rem;
+    line-height: 2rem;
     color: #f20c00;
 }
 
 .icon-jia:active {
-    color: #ff461f;
+    color: #e51c23;
 }
+
+
 /*底部end*/
