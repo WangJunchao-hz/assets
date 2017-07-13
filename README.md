@@ -1,4 +1,4 @@
-# assets
+# 为自己编写的理财助手app
 ## 技术结构：aui + requireJS + vue + apiCloud
 ## 项目结构：
     widget(根目录)
