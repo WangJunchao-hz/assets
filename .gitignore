@@ -13,6 +13,9 @@
 .idea
 .idea/
 .idea/*
+widget/.idea
+widget/.idea/
+widget/.idea/*
 *.iml
 *.ipr
 *.iws
